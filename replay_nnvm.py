@@ -3,14 +3,10 @@
 import numpy as np
 import nnvm.compiler
 import tvm
-import numpy as np
 from tvm.contrib import graph_runtime, util
 
 from matplotlib import pyplot as plt
-import numpy as np
-
 import time
-
 
 loaded_lib = tvm.module.load("deploy.dylib")
 loaded_json = open("deploy.json").read()
@@ -39,5 +35,3 @@ plt.plot(np.exp(x_np),"b")
 plt.hold(True)
 plt.plot(outs,"r")
 plt.show()
-
-
