@@ -15,16 +15,13 @@ model.load_params("model",mx.cpu(0))
 eval_data=np.linspace(0,1,100)
 
 outs=np.array([])
-times=[]
+start = time.time()
 for x in eval_data:
-    start = time.time()
     out = model(mx.nd.array([x])).asnumpy()
-    elasped_time=time.time() - start
-    times.append(elasped_time)
     outs=np.append(outs,out)
 
-
-print np.average(times)
+elasped_time=time.time() - start
+print(elasped_time)
 
 plt.plot(np.exp(eval_data))
 plt.plot(outs,"r")

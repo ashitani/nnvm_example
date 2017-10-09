@@ -26,16 +26,14 @@ x_np = np.linspace(0,1,100).astype("float32")
 times=[]
 
 outs =np.array([])
+start = time.time()
 for x in x_np:
-    start = time.time()
     module.run(data=np.array([x]))
-    elasped_time=time.time() - start
-    times.append(elasped_time)
     out=module.get_output(0, out=tvm.nd.empty(shape)).asnumpy()[0]
     outs=np.append(outs,out)
 
-print np.average(times)
-
+elasped_time=time.time() - start
+print(elasped_time)
 
 plt.plot(np.exp(x_np),"b")
 plt.hold(True)
