@@ -1,7 +1,7 @@
 # nnvm_example
 
 NNVM Example.
-For detail, please read the [Qiita Entry](TBD).
+For detail, please read the [Qiita Entry](https://qiita.com/ashitani/items/e85231297247ec036128).
 
 # Requirements
 
@@ -23,7 +23,7 @@ Infer the function exp() using MXNet and the file "model".
 Convert "model" to the dylib and parameters using NNVM.
 Output files are "deploy.dylib", "deploy.json" and "deploy.params".
 
-## replay.nnvm.py
+## replay_nnvm.py
 
 Infer the function exp() using "deploy.*" files.
 
