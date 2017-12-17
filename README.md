@@ -1,14 +1,28 @@
 # nnvm_example
 
 NNVM Example.
-For detail, please read the [Qiita Entry](https://qiita.com/ashitani/items/e85231297247ec036128).
+For detail, please read the [Qiita Entry for MXNet](https://qiita.com/ashitani/items/e85231297247ec036128) or [the entry for pyTorch](TBD)
 
 # Requirements
 
 - NNVM and TVM
-- MXNet
+- MXNet or PyTorch
 
-# Usage
+# Usage(PyTorch/images)
+
+## export.py
+
+Export pretrained pytorch model to the onnx file in the "models" folder.
+
+## compile.py
+
+Compile onnx files to the TVM dynamic link library.
+
+## replay.py
+
+Infer the models.
+
+# Usage(MXNet)
 
 ## train.py
 
@@ -25,5 +39,5 @@ Output files are "deploy.dylib", "deploy.json" and "deploy.params".
 
 ## replay_nnvm.py
 
-Infer the function exp() using "deploy.*" files.
+Infer the function exp() using "deploy.\*" files.
 
